@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include pasigono *.css
-recursive-include pasigono *.csv
-recursive-include pasigono *.html
-recursive-include pasigono *.ico
-recursive-include pasigono *.js
-recursive-include pasigono *.json
-recursive-include pasigono *.md
-recursive-include pasigono *.png
-recursive-include pasigono *.py
-recursive-include pasigono *.svg
-recursive-include pasigono *.txt
-recursive-exclude pasigono *.pyc
+recursive-include us_checks *.css
+recursive-include us_checks *.csv
+recursive-include us_checks *.html
+recursive-include us_checks *.ico
+recursive-include us_checks *.js
+recursive-include us_checks *.json
+recursive-include us_checks *.md
+recursive-include us_checks *.png
+recursive-include us_checks *.py
+recursive-include us_checks *.svg
+recursive-include us_checks *.txt
+recursive-exclude us_checks *.pyc

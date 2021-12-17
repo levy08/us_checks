@@ -4,12 +4,12 @@ with open('requirements.txt') as f:
 	install_requires = f.read().strip().split('\n')
 
 # get version from __version__ variable in pasigono/__init__.py
-from pasigono import __version__ as version
+from us_checks import __version__ as version
 
 setup(
-	name='pasigono',
+	name='us_checks',
 	version=version,
-	description='ERPNExt customizations for Pasigono',
+	description='ERPNExt customizations for US Check-Writing Conventions',
 	author='Pasigono',
 	author_email='malisa.aisenyi@gmail.com',
 	packages=find_packages(),

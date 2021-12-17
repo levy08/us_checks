@@ -1,6 +1,6 @@
-## Pasigono
+## US Checks
 
-ERPNExt customizations for Pasigono
+ERPNExt customizations for US Check Printing format
 
 #### License
 

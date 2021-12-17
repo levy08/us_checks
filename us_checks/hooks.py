@@ -1,9 +1,9 @@
 from . import __version__ as app_version
 
-app_name = "pasigono"
-app_title = "Pasigono"
+app_name = "us_checks"
+app_title = "US Checks"
 app_publisher = "Pasigono"
-app_description = "ERPNExt customizations for Pasigono"
+app_description = "ERPNExt customizations for US Check-Writing Conventions"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "malisa.aisenyi@gmail.com"
@@ -14,7 +14,7 @@ app_license = "MIT"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/pasigono/css/pasigono.css"
-app_include_js = "/assets/js/form-raw.min.js"
+# app_include_js = "/assets/js/form-raw.min.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/pasigono/css/pasigono.css"
@@ -28,10 +28,10 @@ app_include_js = "/assets/js/form-raw.min.js"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-page_js = {"point-of-sale" : "custom_scripts/point_of_sale/point_of_sale.js"}
+# page_js = {"point-of-sale" : "custom_scripts/point_of_sale/point_of_sale.js"}
 
 # include js in doctype views
-doctype_js = {"pos_profile" : "custom_scripts/pos_profile/pos_profile.js"}
+# doctype_js = {"pos_profile" : "custom_scripts/pos_profile/pos_profile.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -91,7 +91,7 @@ doctype_js = {"pos_profile" : "custom_scripts/pos_profile/pos_profile.js"}
 
 doc_events = {
 	"AccountsController": {
-		"validate": "pasigono.custom_scripts.amount_in_words.validate"
+		"validate": "us_checks.custom_scripts.amount_in_words.validate"
 	},
 }
 
@@ -127,7 +127,7 @@ doc_events = {
 #
 override_whitelisted_methods = {
 	#"frappe.desk.doctype.event.event.get_events": "stripe_terminal.event.get_events"
-	"erpnext.accounts.doctype.pos_invoice.pos_invoice.make_sales_return": "stripe_terminal.custom_scripts.controllers.sales_and_purchase_return.make_sales_return"
+#	"erpnext.accounts.doctype.pos_invoice.pos_invoice.make_sales_return": "stripe_terminal.custom_scripts.controllers.sales_and_purchase_return.make_sales_return"
 }
 #
 # each overriding function accepts a `data` argument;
@@ -176,7 +176,6 @@ user_data_fields = [
 #For jinja printing
 jenv = {
 	"methods": [
-		"money_in_words:pasigono.custom_scripts.amount_in_words.money_in_words",
+		"money_in_words:us_checks.custom_scripts.amount_in_words.money_in_words",
 	]
 }
-
