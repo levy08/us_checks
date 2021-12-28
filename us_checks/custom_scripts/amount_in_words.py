@@ -59,7 +59,7 @@ def money_in_words(number, main_currency = None, fraction_currency=None):
 	#X.XX
 	else:
 		#out = out + ' ' + _('and') + ' ' + _(in_words(fraction, in_million).title()) + ' ' + fraction_currency
-		out = out.capitalize() + ' ' + _('and') + ' ' + fraction + '/100'
+		out = _(in_words(main, in_million).capitalize()) + ' ' + _('and') + ' ' + fraction + '/100'
 
 	return out
 
