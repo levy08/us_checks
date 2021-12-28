@@ -49,7 +49,7 @@ def money_in_words(number, main_currency = None, fraction_currency=None):
 
 	# 0.00
 	if main == '0' and fraction in ['00', '000']:
-		out = "{0} {1}".format(main_currency, _('Zero')) + ' ' + 'and NO/100'
+		out = "{0} {1}".format(main_currency, _('Zero'))
 	# 0.XX
 	elif main == '0':
 		out = 'Zero' + ' ' +_('and') + ' ' + fraction + '/100'
