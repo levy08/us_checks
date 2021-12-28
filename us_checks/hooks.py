@@ -3,7 +3,7 @@ from . import __version__ as app_version
 app_name = "us_checks"
 app_title = "US Checks"
 app_publisher = "Pasigono"
-app_description = "ERPNExt customizations for US Check-Writing Conventions"
+app_description = "ERPNExt Customizations for US Check-Writing Conventions"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "malisa.aisenyi@gmail.com"
