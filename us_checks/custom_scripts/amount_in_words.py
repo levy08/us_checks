@@ -73,9 +73,13 @@ def in_words(integer, in_million=True):
 	locale = 'en_IN' if not in_million else frappe.local.lang
 	integer = int(integer)
 	try:
-		ret = num2words(integer, lang=locale)
+		fet = num2words(integer, lang=locale)
 	except NotImplementedError:
-		ret = num2words(integer, lang='en')
+		fet = num2words(integer, lang='en')
 	except OverflowError:
-		ret = num2words(integer, lang='en')
+		fet = num2words(integer, lang='en')
+	try:
+		ret = fet.replace(' and ', ' ')
+	except:
+		ret = fet
 	return ret
