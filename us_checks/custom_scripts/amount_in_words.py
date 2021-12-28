@@ -80,8 +80,8 @@ def in_words(integer, in_million=True):
 		fet = num2words(integer, lang='en')
 	try:
 		for punctuation in fet :
-			ret = fet.replace(' and ', ' ')
-			ret = fet.replace(',', '')
+			pet = fet.replace(' and ', ' ')
+			ret = pet.replace(',', '')
 	except:
 		ret = fet
 	return ret
