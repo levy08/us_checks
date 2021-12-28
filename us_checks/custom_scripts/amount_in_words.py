@@ -54,7 +54,7 @@ def money_in_words(number, main_currency = None, fraction_currency=None):
 	elif main == '0':
 		out = 'Zero' + ' ' +_('and') + ' ' + fraction + '/100'
     #X.00
-	elif fraction == '00' or '000' :
+	elif fraction == '00' :
 		out = _(in_words(main, in_million).capitalize()) + ' ' + 'and NO/100'
 	#X.XX
 	else:
