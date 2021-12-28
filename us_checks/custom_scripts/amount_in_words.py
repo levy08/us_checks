@@ -49,15 +49,17 @@ def money_in_words(number, main_currency = None, fraction_currency=None):
 
 	# 0.00
 	if main == '0' and fraction in ['00', '000']:
-		out = "{0} {1}".format(main_currency, _('Zero'))
+		out = "{0} {1}".format(main_currency, _('Zero')) + ' ' + 'and NO/100'
 	# 0.XX
 	elif main == '0':
 		out = 'Zero' + ' ' +_('and') + ' ' + fraction + '/100'
-	else:
+    #X.00
+	elif fraction == '00' or '000' :
 		out = _(in_words(main, in_million).capitalize()) + ' ' + 'and NO/100'
-		if cint(fraction):
-			#out = out + ' ' + _('and') + ' ' + _(in_words(fraction, in_million).title()) + ' ' + fraction_currency
-			out = out.capitalize() + ' ' + _('and') + ' ' + fraction + '/100'
+	#X.XX
+	else:
+		#out = out + ' ' + _('and') + ' ' + _(in_words(fraction, in_million).title()) + ' ' + fraction_currency
+		out = out.capitalize() + ' ' + _('and') + ' ' + fraction + '/100'
 
 	return out
 
