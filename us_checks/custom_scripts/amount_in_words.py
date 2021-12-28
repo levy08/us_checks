@@ -49,7 +49,7 @@ def money_in_words(number, main_currency = None, fraction_currency=None):
 
 	# 0.00
 	if main == '0' and fraction in ['00', '000']:
-		out = "{0} {1}".format(main_currency, _('Zero'))
+		out = "{0} {1}".format(main_currency, _('Zero')) + ' and NO/100'
 	# 0.XX
 	elif main == '0':
 		out = 'Zero' + ' ' +_('and') + ' ' + fraction + '/100'
@@ -79,7 +79,9 @@ def in_words(integer, in_million=True):
 	except OverflowError:
 		fet = num2words(integer, lang='en')
 	try:
-		ret = fet.replace(' and ', ' ')
+		for punctuation in fet :
+			ret = fet.replace(' and ', ' ')
+			ret = fet.replace(',', '')
 	except:
 		ret = fet
 	return ret
