@@ -1,6 +1,7 @@
 ## US Checks
 
-ERPNExt customizations for US Check Printing format
+ERPNExt Customizations for US Check Printing format
+
 
 #### License
 
